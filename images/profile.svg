@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" role="img" aria-labelledby="title desc">
+  <title id="title">Bumkyu 프로필 일러스트</title>
+  <desc id="desc">포트폴리오 제작자를 상징하는 추상 프로필 이미지</desc>
+  <rect width="320" height="320" rx="24" fill="#f7f8fb"/>
+  <circle cx="160" cy="118" r="58" fill="#116d6e"/>
+  <path d="M68 278c10-62 48-98 92-98s82 36 92 98" fill="#d94f30"/>
+  <path d="M93 72c35-35 99-42 145 8" fill="none" stroke="#59c3c3" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="139" cy="112" r="8" fill="#fff"/>
+  <circle cx="181" cy="112" r="8" fill="#fff"/>
+  <path d="M137 145c14 13 32 13 46 0" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round"/>
+</svg>
