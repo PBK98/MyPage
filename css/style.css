@@ -288,6 +288,32 @@ h3 {
   transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
+.project-card {
+  display: grid;
+  grid-template-rows: 2.5rem 4.8rem 1.5rem 44px;
+  gap: 12px;
+}
+
+.project-title,
+.project-description {
+  margin: 0;
+  overflow: hidden;
+}
+
+.project-title {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-height: 1.25;
+}
+
+.project-description {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-height: 1.6;
+}
+
 .skill-card:hover,
 .project-card:hover {
   border-color: var(--color-primary);
@@ -321,13 +347,26 @@ h3 {
   color: var(--color-muted);
 }
 
+.project-scroll-area {
+  max-height: min(620px, 65vh);
+  padding: 4px 12px 4px 4px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+}
+
 .project-meta {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 14px;
+  margin: 0;
+  align-items: center;
   color: var(--color-muted);
   font-size: 0.9rem;
+}
+
+.project-link {
+  width: 100%;
 }
 
 .contact-form {

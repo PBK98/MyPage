@@ -1,4 +1,5 @@
 const GITHUB_USERNAME = "pbk98";
+const REPOS_PER_PAGE = 100;
 const projectList = document.querySelector("[data-project-list]");
 const projectStatus = document.querySelector("[data-project-status]");
 const filterList = document.querySelector("[data-filter-list]");
@@ -89,13 +90,13 @@ const renderProjects = () => {
     .map(
       ({ name, description, html_url, stargazers_count, language }) => `
         <article class="project-card">
-          <h3>${escapeHTML(name)}</h3>
-          <p>${escapeHTML(description || "설명이 아직 등록되지 않은 저장소입니다.")}</p>
+          <h3 class="project-title">${escapeHTML(name)}</h3>
+          <p class="project-description">${escapeHTML(description || "설명이 아직 등록되지 않은 저장소입니다.")}</p>
           <div class="project-meta">
             <span>★ ${stargazers_count}</span>
             <span>${escapeHTML(language || "No language")}</span>
           </div>
-          <a class="button secondary" href="${html_url}" target="_blank" rel="noreferrer">
+          <a class="button secondary project-link" href="${html_url}" target="_blank" rel="noreferrer">
             GitHub에서 보기
           </a>
         </article>
@@ -110,15 +111,25 @@ const fetchRepos = async () => {
   renderProjects();
 
   try {
-    const response = await fetch(
-      `https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=12`
-    );
+    const repos = [];
+    let page = 1;
+    let hasMoreRepos = true;
 
-    if (!response.ok) {
-      throw new Error(`GitHub API error: ${response.status}`);
+    while (hasMoreRepos) {
+      const response = await fetch(
+        `https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=${REPOS_PER_PAGE}&page=${page}`
+      );
+
+      if (!response.ok) {
+        throw new Error(`GitHub API error: ${response.status}`);
+      }
+
+      const pageRepos = await response.json();
+      repos.push(...pageRepos);
+      hasMoreRepos = pageRepos.length === REPOS_PER_PAGE;
+      page += 1;
     }
 
-    const repos = await response.json();
     projectState.repos = repos;
     projectState.status = "success";
   } catch (error) {
