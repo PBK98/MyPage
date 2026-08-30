@@ -4,6 +4,7 @@ const navList = document.querySelector("[data-nav-list]");
 const navLinks = document.querySelectorAll(".nav-list a");
 const themeToggle = document.querySelector("[data-theme-toggle]");
 const scrollTopButton = document.querySelector("[data-scroll-top]");
+const linkedInLink = document.querySelector('.social-links a[href*="linkedin.com"]');
 const revealElements = document.querySelectorAll(".reveal");
 
 const state = {
@@ -24,8 +25,12 @@ const renderMenu = () => {
 
 const handleScroll = () => {
   const isScrolled = window.scrollY > 60;
+  const linkedInTop = linkedInLink.getBoundingClientRect().top;
+  const buttonBottom = Math.max(18, window.innerHeight - linkedInTop + 16);
+
   header.classList.toggle("scrolled", isScrolled);
   scrollTopButton.classList.toggle("visible", window.scrollY > 300);
+  scrollTopButton.style.setProperty("--scroll-top-bottom", `${buttonBottom}px`);
 };
 
 menuToggle.addEventListener("click", () => {
@@ -51,6 +56,7 @@ scrollTopButton.addEventListener("click", () => {
 });
 
 window.addEventListener("scroll", handleScroll);
+window.addEventListener("resize", handleScroll);
 
 const observer = new IntersectionObserver(
   (entries) => {

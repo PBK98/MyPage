@@ -379,7 +379,7 @@ textarea:focus {
 .scroll-top {
   position: fixed;
   right: 18px;
-  bottom: 18px;
+  bottom: var(--scroll-top-bottom, 18px);
   display: none;
   width: 44px;
   height: 44px;
@@ -390,6 +390,7 @@ textarea:focus {
   font-size: 1.25rem;
   cursor: pointer;
   box-shadow: var(--shadow-card);
+  transition: bottom 0.2s ease;
 }
 
 .scroll-top.visible {

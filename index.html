@@ -1,166 +1,152 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>pbk98 Portfolio</title>
-    <meta
-      name="description"
-      content="HTML, CSS, JavaScript로 만든 반응형 포트폴리오 웹사이트"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-    <script src="js/github.js?v=20260831" defer></script>
-    <script src="js/form.js" defer></script>
-    <script src="js/main.js" defer></script>
-  </head>
-  <body>
-    <header class="site-header" data-header>
-      <nav class="nav" aria-label="주요 메뉴">
-        <a class="logo" href="#hero">Bumkyu</a>
-        <button
-          class="menu-toggle"
-          type="button"
-          aria-label="메뉴 열기"
-          aria-expanded="false"
-          data-menu-toggle
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-        <ul class="nav-list" data-nav-list>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li>
-            <button class="theme-toggle" type="button" data-theme-toggle>
-              다크 모드
-            </button>
-          </li>
-        </ul>
-      </nav>
-    </header>
 
-    <main>
-      <section class="hero section reveal" id="hero">
-        <div class="hero-content">
-          <p class="eyebrow">Web Core & Front-end</p>
-          <h1>안녕하세요, 웹을 배우며 성장하는 Bumkyu입니다.</h1>
-          <p>
-            순수 HTML, CSS, JavaScript로 사용자 이벤트와 화면 변화가 연결되는
-            포트폴리오를 만들고 있습니다.
-          </p>
-          <div class="hero-actions">
-            <a class="button primary" href="#projects">프로젝트 보기</a>
-            <a class="button secondary" href="#contact">연락하기</a>
-          </div>
-        </div>
-      </section>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pbk98 Portfolio</title>
+  <meta name="description" content="HTML, CSS, JavaScript로 만든 반응형 포트폴리오 웹사이트" />
+  <link rel="stylesheet" href="css/style.css?v=20260831-2" />
+  <script src="js/github.js?v=20260831" defer></script>
+  <script src="js/form.js" defer></script>
+  <script src="js/main.js?v=20260831-2" defer></script>
+</head>
 
-      <section class="section about reveal" id="about">
-        <div class="section-heading">
-          <p class="eyebrow">About</p>
-          <h2>나를 소개합니다</h2>
-        </div>
-        <div class="about-layout">
-          <img
-            class="profile-image"
-            src="images/profile.svg"
-            alt="Bumkyu를 상징하는 프로필 일러스트"
-          />
-          <article class="about-card">
-            <h3>작은 기능을 끝까지 연결하는 개발자</h3>
-            <p>
-              저는 사용자가 버튼을 누르는 순간부터 상태가 바뀌고 화면이 다시
-              그려지는 흐름을 이해하는 데 집중하고 있습니다. 이번 페이지는
-              DOM 조작, 이벤트 처리, 비동기 데이터 렌더링을 직접 구현한
-              결과물입니다.
-            </p>
-            <p>
-              꾸준히 기록하고 실험하면서, 읽기 쉬운 구조와 반응형 레이아웃을
-              갖춘 웹페이지를 만드는 것이 목표입니다.
-            </p>
-          </article>
-        </div>
-      </section>
+<body>
+  <header class="site-header" data-header>
+    <nav class="nav" aria-label="주요 메뉴">
+      <a class="logo" href="#hero">Park Bumkyu</a>
+      <button class="menu-toggle" type="button" aria-label="메뉴 열기" aria-expanded="false" data-menu-toggle>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-list" data-nav-list>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li>
+          <button class="theme-toggle" type="button" data-theme-toggle>
+            다크 모드
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
-      <section class="section skills reveal" id="skills">
-        <div class="section-heading">
-          <p class="eyebrow">Skills</p>
-          <h2>기술 스택</h2>
-        </div>
-        <div class="skill-grid" aria-label="기술 스택 목록">
-          <article class="skill-card">
-            <h3>HTML</h3>
-            <p>시맨틱 태그, 접근성, 폼 구조</p>
-          </article>
-          <article class="skill-card">
-            <h3>CSS</h3>
-            <p>Flexbox, Grid, 반응형 레이아웃</p>
-          </article>
-          <article class="skill-card">
-            <h3>JavaScript</h3>
-            <p>DOM 조작, 이벤트, 상태 렌더링</p>
-          </article>
-          <article class="skill-card">
-            <h3>GitHub API</h3>
-            <p>fetch, async/await, 에러 처리</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section projects reveal" id="projects">
-        <div class="section-heading">
-          <p class="eyebrow">Projects</p>
-          <h2>GitHub 프로젝트</h2>
-        </div>
-        <div class="project-toolbar" data-filter-list></div>
-        <div class="project-status" data-project-status>로딩 중...</div>
-        <div class="project-grid" data-project-list aria-live="polite"></div>
-      </section>
-
-      <section class="section contact reveal" id="contact">
-        <div class="section-heading">
-          <p class="eyebrow">Contact</p>
-          <h2>문의하기</h2>
-        </div>
-        <form class="contact-form" novalidate data-contact-form>
-          <div class="field">
-            <label for="name">이름</label>
-            <input id="name" name="name" type="text" autocomplete="name" />
-            <p class="error-message" data-error-for="name"></p>
-          </div>
-          <div class="field">
-            <label for="email">이메일</label>
-            <input id="email" name="email" type="email" autocomplete="email" />
-            <p class="error-message" data-error-for="email"></p>
-          </div>
-          <div class="field">
-            <label for="message">메시지</label>
-            <textarea id="message" name="message" rows="5"></textarea>
-            <p class="error-message" data-error-for="message"></p>
-          </div>
-          <button class="button primary" type="submit">보내기</button>
-          <p class="form-success" data-form-success></p>
-        </form>
-      </section>
-    </main>
-
+  <main>
     <button class="scroll-top" type="button" aria-label="맨 위로 이동" data-scroll-top>
       ↑
     </button>
 
-    <footer class="footer">
-      <p>&copy; 2026 Bumkyu. All rights reserved.</p>
-      <div class="social-links">
-        <a href="https://github.com/pbk98" target="_blank" rel="noreferrer">
-          GitHub
-        </a>
-        <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">
-          LinkedIn
-        </a>
+    <section class="hero section reveal" id="hero">
+      <div class="hero-content">
+        <p class="eyebrow">Web Core & Front-end</p>
+        <h1>안녕하세요, 개발 언어와 CS를 공부하는</h1>
+        <h2>개발자 박범규 입니다.</h2>
+        <p>
+          이 웹사이트는 javascript, html, css 로 만들어진 반응형 웹사이트입니다.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#projects">프로젝트 보기</a>
+          <a class="button secondary" href="#contact">연락하기</a>
+        </div>
       </div>
-    </footer>
-  </body>
+    </section>
+
+    <section class="section about reveal" id="about">
+      <div class="section-heading">
+        <p class="eyebrow">About</p>
+        <h2>나를 소개합니다</h2>
+      </div>
+      <div class="about-layout">
+        <img class="profile-image" src="images/profile.svg" alt="Bumkyu를 상징하는 프로필 일러스트" />
+        <article class="about-card">
+          <h3>Codyssey 1기 수강생 박범규 입니다.</h3>
+          <p>
+            Codyssey 과정을 통해 여러 언어와 CS를 공부하고 있습니다.
+          </p>
+          <p>
+            코드의 동작 원리를 이해하고 효율적인 프로그래밍을 하는 개발자가 되고싶습니다.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section skills reveal" id="skills">
+      <div class="section-heading">
+        <p class="eyebrow">Skills</p>
+        <h2>기술 스택</h2>
+      </div>
+      <div class="skill-grid" aria-label="기술 스택 목록">
+        <article class="skill-card">
+          <h3>Python</h3>
+          <p>기초 문법, 데이터 구조, 객체 지향 프로그래밍</p>
+        </article>
+        <article class="skill-card">
+          <h3>HTML</h3>
+          <p>시맨틱 태그, 웹 표준, 접근성</p>
+        </article>
+        <article class="skill-card">
+          <h3>JavaScript</h3>
+          <p>DOM 조작, 이벤트, 상태 렌더링</p>
+        </article>
+        <article class="skill-card">
+          <h3>CSS</h3>
+          <p>flexbox, grid, 반응형 웹</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section projects reveal" id="projects">
+      <div class="section-heading">
+        <p class="eyebrow">Projects</p>
+        <h2>GitHub 프로젝트</h2>
+      </div>
+      <div class="project-toolbar" data-filter-list></div>
+      <div class="project-status" data-project-status>로딩 중...</div>
+      <div class="project-grid" data-project-list aria-live="polite"></div>
+    </section>
+
+    <section class="section contact reveal" id="contact">
+      <div class="section-heading">
+        <p class="eyebrow">Contact</p>
+        <h2>문의하기</h2>
+      </div>
+      <form class="contact-form" novalidate data-contact-form>
+        <div class="field">
+          <label for="name">이름</label>
+          <input id="name" name="name" type="text" autocomplete="name" />
+          <p class="error-message" data-error-for="name"></p>
+        </div>
+        <div class="field">
+          <label for="email">이메일</label>
+          <input id="email" name="email" type="email" autocomplete="email" />
+          <p class="error-message" data-error-for="email"></p>
+        </div>
+        <div class="field">
+          <label for="message">메시지</label>
+          <textarea id="message" name="message" rows="5"></textarea>
+          <p class="error-message" data-error-for="message"></p>
+        </div>
+        <button class="button primary" type="submit">보내기</button>
+        <p class="form-success" data-form-success></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Bumkyu. All rights reserved.</p>
+    <div class="social-links">
+      <a href="https://github.com/pbk98" target="_blank" rel="noreferrer">
+        GitHub
+      </a>
+      <a href="https://www.linkedin.com/in/bumkyu-park-30794a36a/" target="_blank" rel="noreferrer">
+        LinkedIn
+      </a>
+    </div>
+  </footer>
+</body>
+
 </html>
