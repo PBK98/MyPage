@@ -354,7 +354,31 @@ h3 {
   padding: 4px 12px 4px 4px;
   overflow-y: auto;
   overscroll-behavior: contain;
+  scrollbar-color: var(--color-primary) transparent;
   scrollbar-gutter: stable;
+}
+
+.project-scroll-area::-webkit-scrollbar {
+  width: 10px;
+}
+
+.project-scroll-area::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.project-scroll-area::-webkit-scrollbar-thumb {
+  border: 2px solid transparent;
+  border-radius: 8px;
+  background: var(--color-primary);
+  background-clip: content-box;
+}
+
+[data-theme="dark"] .project-scroll-area {
+  scrollbar-color: #ffffff transparent;
+}
+
+[data-theme="dark"] .project-scroll-area::-webkit-scrollbar-thumb {
+  background-color: #ffffff;
 }
 
 .project-meta {
