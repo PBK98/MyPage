@@ -3,8 +3,7 @@
 HTML, CSS, JavaScript로 만든 반응형 포트폴리오 웹사이트입니다.
 
 ## 배포 URL
-
-[https://pbk98.github.io/MyPage/]
+[https://pbk98.github.io/MyPage/](https://pbk98.github.io/MyPage/)
 
 ## 사용 기술
 
@@ -30,6 +29,8 @@ HTML, CSS, JavaScript로 만든 반응형 포트폴리오 웹사이트입니다.
 ```text
 .
 ├── index.html
+├── README.md
+├── LICENSE.txt
 ├── css/
 │   └── style.css
 ├── js/
@@ -37,14 +38,27 @@ HTML, CSS, JavaScript로 만든 반응형 포트폴리오 웹사이트입니다.
 │   ├── github.js
 │   └── main.js
 └── images/
+    ├── desktop_darkmode.png
+    ├── desktop_lightmode.png
+    ├── mobile_darkmode.PNG
+    ├── mobile_lightmode.PNG
     └── profile.svg
 ```
 
-## GitHub API 설정
-
-`js/github.js`의 `GITHUB_USERNAME` 값을 본인의 GitHub 아이디로 바꾸면 됩니다.
-
-
 ## 스크린샷
 
-데스크톱, 모바일, 다크 모드 스크린샷을 추가하세요.
+### 데스크톱 라이트 모드
+
+![데스크톱 라이트 모드](images/desktop_lightmode.png)
+
+### 데스크톱 다크 모드
+
+![데스크톱 다크 모드](images/desktop_darkmode.png)
+
+### 모바일 라이트 모드
+
+![모바일 라이트 모드](images/mobile_lightmode.PNG)
+
+### 모바일 다크 모드
+
+![모바일 다크 모드](images/mobile_darkmode.PNG)
