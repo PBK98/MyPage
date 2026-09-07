@@ -1,6 +1,7 @@
 # Bumkyu Portfolio
 
 순수 HTML, CSS, JavaScript로 만든 반응형 포트폴리오 웹사이트입니다.
+https://pbk98.github.io/MyPage/
 
 ## 사용 기술
 
