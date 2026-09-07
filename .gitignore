@@ -14,3 +14,4 @@ ENV/
 Thumbs.db
 .git
 tmp/
+memo/

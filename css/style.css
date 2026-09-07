@@ -445,6 +445,7 @@ textarea:focus {
   position: fixed;
   right: 18px;
   bottom: var(--scroll-top-bottom, 18px);
+  z-index: 30;
   display: none;
   width: 44px;
   height: 44px;
