@@ -1,7 +1,10 @@
 # Bumkyu Portfolio
 
-순수 HTML, CSS, JavaScript로 만든 반응형 포트폴리오 웹사이트입니다.
-https://pbk98.github.io/MyPage/
+HTML, CSS, JavaScript로 만든 반응형 포트폴리오 웹사이트입니다.
+
+## 배포 URL
+
+[https://pbk98.github.io/MyPage/]
 
 ## 사용 기술
 
@@ -41,9 +44,6 @@ https://pbk98.github.io/MyPage/
 
 `js/github.js`의 `GITHUB_USERNAME` 값을 본인의 GitHub 아이디로 바꾸면 됩니다.
 
-## 배포 URL
-
-GitHub Pages 배포 후 이곳에 URL을 작성하세요.
 
 ## 스크린샷
 
